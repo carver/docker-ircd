@@ -13,5 +13,7 @@ EXPOSE :6664
 EXPOSE :6667
 
 add start.sh /start.sh
+add ngircd.conf /etc/ngircd/ngircd.conf
+add ngircd.motd /etc/ngircd/ngircd.motd
 
 CMD ["/start.sh"]
