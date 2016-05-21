@@ -11,7 +11,7 @@ Currently using ngircd, because it was the first plug-and-play server I found.
 Deployment instructions
 ---------
 
-`docker run -d carver/ngircd`
+`docker run -p 6667:6667 -d carver/ngircd`
 
 You can test with: `irssi -c localhost`
 
