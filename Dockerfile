@@ -1,13 +1,11 @@
-FROM ubuntu
+FROM ubuntu:19.04
 
 MAINTAINER Jason Carver <ut96caarrs@snkmail.com>
 
-# RUN apt-get update && apt-get install apt-transport-https
-
-# RUN echo "deb https://archive.ubuntu.com/ubuntu precise main universe" >> /etc/apt/sources.list
-
 RUN apt-get update && \
-  apt-get install -y apt-transport-https busybox-syslogd ngircd
+  apt-get install -y apt-utils # install apt-utils first or apt will complain
+
+RUN apt-get install -y apt-transport-https busybox-syslogd=1:1.27.2-2ubuntu7 ngircd=25-2
 
 # expose IRC ports
 EXPOSE :443
